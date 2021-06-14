@@ -1,0 +1,132 @@
+.footer {
+    padding-top: 120px;
+    background: #E1E1E1;
+    &__wrapper {
+        display: flex;
+        padding-bottom: 60px;
+        background-repeat: no-repeat;
+        background-position: center 50px;
+    }
+    &__brand {
+        margin-right: 100px;
+        .logo {
+            display: inline-block;
+            width: 180px;
+            height: 136px;
+            margin-top: -48px;
+        }
+    }
+    &__socials {
+        display: flex;
+        align-items: center;
+        &-item {
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #E00000;
+            border-radius: 100px;
+            margin-right: 10px;
+            transition: all 0.35s ease-in-out 0s;
+        }
+    }
+    &__sitemap {
+        &-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #0F2137;
+            margin-bottom: 20px;
+        }
+        a {
+            font-size: 18px;
+            font-weight: 300;
+            display: block;
+            color: #343D48;
+            margin-bottom: 15px;
+        }
+    }
+    &__contacts {
+        text-align: right;
+        margin-left: auto;
+        &-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #0F2137;
+            margin-bottom: 30px;
+        }
+        &-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            text-align: right;
+            margin-bottom: 25px;
+        }
+        &-item {
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $colorPrimary;
+            border-radius: 100px;
+            margin-right: 10px;
+            transition: all 0.35s ease-in-out 0s;
+            &:hover {
+                opacity: 0.7;
+            }
+            &-mail {
+                font-size: 18px;
+                font-weight: 400;
+                text-decoration: underline;
+            }
+            &--insta-fb {
+                background: none;
+            }
+        } 
+    }
+    .copyright {
+        padding: 20px 0;
+        border-top: 1px solid #D0D2D4;
+        text-align: center;
+        font-size: 14px;
+        color: #AFB5C0;
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    .footer {
+        padding: 120px 20px 0 20px;
+
+        &__wrapper {
+            flex-direction: column;
+            padding-bottom: 30px;
+        }
+
+        &__brand {
+            .logo {
+                margin-left: -16px;
+                padding-top: 15px;
+            }
+        }
+
+        &__sitemap {
+            margin-bottom: 40px;
+        }
+
+        &__contacts {
+            text-align: left;
+            margin-left: 0;
+
+            &-wrapper {
+               text-align: left;
+               justify-content: flex-end;
+               flex-direction: row-reverse;
+            }
+           &-item {
+                text-align: left;
+            }
+        }
+    }
+}

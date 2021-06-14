@@ -1,0 +1,74 @@
+
+.btn {
+    display: inline-block;
+    width: auto;
+    height: 42px;
+    line-height: 42px;
+    background: $colorPrimary;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    padding: 0 50px;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 8px 25px -7px $colorPrimary;
+    transition: $transition;
+    cursor: pointer;
+    outline: none;
+    &:hover {
+        box-shadow: 0 8px 25px -3px $colorPrimary;
+    }
+    &.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+    &--full-width {
+        padding: 0 10px;
+        width: 100%;
+    }
+    &--btn-big {
+        padding: 0 60px;
+        height: 60px;
+        line-height: 60px;
+        border-radius: 10px;
+    }
+    &--socials {
+        box-shadow: none;
+        padding: 8px 15px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        font-weight: 500;
+        min-width: 48px;
+        min-height: auto;
+        height: 34px;
+        text-transform: uppercase;
+        font-family: inherit;
+        &:hover {
+            box-shadow: none;
+            opacity: 1;
+            background-color: #ac0000;
+        } 
+    }
+}
+.link-btn {
+    display: inline-block;
+    width: auto;
+    height: 42px;
+    line-height: 42px;
+    background: $colorPrimary;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    padding: 0 50px;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 8px 25px -7px $colorPrimary;
+    transition: $transition;
+    cursor: pointer;
+    outline: none;
+    &:hover {
+        box-shadow: 0 8px 25px -3px $colorPrimary;
+    }
+}

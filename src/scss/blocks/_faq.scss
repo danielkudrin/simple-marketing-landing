@@ -1,0 +1,100 @@
+.faq {
+    background-color: rgb(249, 251, 253);
+    &__title {
+        font-size: 24px;
+        color: rgb(15, 33, 55);
+        margin-bottom: 0px;
+        margin-top: 0px;
+        font-weight: 400;
+        text-align: center;
+        letter-spacing: -0.025em;
+        margin-bottom: 75px;
+    }
+}
+
+.accordion {
+    margin-left: -15px;
+    margin-right: -15px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 30px;
+    &__item {
+        border-bottom: 1px solid rgb(235, 235, 235);
+        border-top: 0px none;
+        
+        &.active {
+            .accordion__question:before {
+                transform: rotate(180deg);
+                background-image: url(../img/icons/minus.svg);
+            }
+            .accordion__answer {
+                opacity: 1;
+                height: auto;
+            }
+        }
+    }
+    &__question {
+        padding: 23px 60px;
+        display: flex;
+        -moz-box-align: center;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+        font-size: 19px;
+        color: rgb(15, 33, 55);
+        margin-bottom: 0px;
+        margin-top: 0px;
+        font-weight: 400;
+        letter-spacing: -0.025em;
+        &:before {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            margin-top: -14px;
+            width: 28px;
+            height: 28px;
+            background-image: url(../img/icons/plus.svg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            transition: $transition;
+        }
+    }
+    &__answer {
+        font-size: 15px;
+        color: rgb(93, 100, 109);
+        margin-bottom: 0px;
+        margin-top: 0px;
+        line-height: 1.75;
+        padding: 0px 60px 23px;
+        animation: 0.35s ease-in 0s 1 normal none running lbWRkT;
+        height: 0;
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .faq {
+        &__title {
+            font-size: 20px;
+            margin-bottom: 45px;
+        }
+    }
+
+    .accordion__question {
+        font-size: 16px;
+        padding: 16px 14px 23px 60px;
+        &:before {
+            margin-top: -16px;
+        }
+    }
+    .accordion__answer {
+        font-size: 15px;
+        padding: 16px 14px 23px 60px;
+        letter-spacing: 0.3px;
+    }
+}
